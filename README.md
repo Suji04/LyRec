@@ -6,4 +6,4 @@ I built ***LyRec*** (see what I did there? 😉), a recommendation system for so
 
 ## Demo
 
-
+![](https://github.com/Suji04/LyRec/blob/main/demo.gif)
