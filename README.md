@@ -6,4 +6,9 @@ I built ***LyRec*** (see what I did there? 😉), a recommendation system for so
 
 ## Demo
 
-![](https://github.com/Suji04/LyRec/blob/main/demo.gif)
+![](https://github.com/Suji04/LyRec/blob/main/demo/demo.gif)
+
+<img src="https://github.com/Suji04/LyRec/blob/main/demo/demo-ss-1.png" alt="drawing" width="800"/>
+<img src="https://github.com/Suji04/LyRec/blob/main/demo/demo-ss-2.png" alt="drawing" width="800"/>
+<img src="https://github.com/Suji04/LyRec/blob/main/demo/demo-ss-3.png" alt="drawing" width="800"/>
+
