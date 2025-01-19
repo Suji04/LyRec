@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LyRec - Find Songs</title>
+  <!-- Bootstrap -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+    .hello-text{
+      color: rgb(109, 95, 189);
+      font-family: "Outfit", serif;
+      font-weight: 600;
+      font-family: "Outfit", serif;
+    }
+    .lyrec{
+      color: rgb(29,185,84);
+    }
+
+  </style>
+
+</head>
+<body class="bg-dark text-white">
+<div class="container py-5">
+  <h1 class="mb-4 hello-text">Hello! I'm <span class="lyrec">LyRec,</span> your personal song recommender</h1>
+  <form action="/search" method="POST">
+    <div class="mb-3">
+      <label for="query_lyrics" class="form-label col-form-label-lg">Enter Lyrics</label>
+      <textarea 
+        class="form-control bg-light text-dark" 
+        id="query_lyrics" 
+        name="query_lyrics" 
+        rows="12"
+        placeholder="Example:
+I've been reading books of old, the legends and the myths
+Achilles and his gold, Hercules and his gifts
+Spider-Man's control and Batman with his fists
+And clearly, I don't see myself upon that list
+..."></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="query_description" class="form-label col-form-label-lg">Enter Description</label>
+      <textarea 
+        class="form-control bg-light text-dark" 
+        id="query_description" 
+        name="query_description" 
+        rows="4"
+        placeholder="Example:
+I'm looking for a bittersweet pop song with..."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Find songs</button>
+  </form>
+</div>
+</body>
+</html>

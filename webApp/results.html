@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LyRec - Search Results</title>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto+Mono&display=swap" rel="stylesheet">
+  
+  <style>
+    .hello-text{
+      color: rgb(109, 95, 189);
+      font-family: "Outfit", serif;
+      font-weight: 600;
+      font-family: "Outfit", serif;
+    }
+    .lyrec{
+      color: rgb(29,185,84);
+    }
+    /* Dark theme overrides, optional */
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .song-container {
+      position: relative;
+      margin-bottom: 20px; /* gap between containers */
+      border-radius: 5px;
+      padding: 15px;
+      transition: background-color 0.3s;
+      /* color: #fff; */
+    }
+    /* Hide lyrics by default */
+    .song-lyrics {
+      display: none;
+      margin-top: 10px;
+    }
+    /* Show lyrics on hover */
+    .song-container:hover .song-lyrics {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<div class="container py-5">
+  <h1 class="mb-4 hello-text">Here's what I have found for <span class="lyrec">you...</span></h1>
+
+  {% if songs and songs|length > 0 %}
+    {% for song in songs %}
+      <div class="song-container"
+           style="background: linear-gradient(to bottom, {{ song._bg_color }} 0%, {{ song._bg_color }}77 100%);">
+        <strong>{{ song.song }}</strong> by <em>{{ song.artist }}</em><br>
+
+        {% if song.text %}
+        <div class="song-lyrics">
+          <hr>
+          <p><strong>Lyrics:</strong></p>
+          <pre style="white-space: pre-wrap;">{{ song.text }}</pre>
+        </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No songs found.</p>
+  {% endif %}
+
+  <a class="btn btn-secondary mt-3"  href="/">Go Back</a>
+</div>
+</body>
+</html>
