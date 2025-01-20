@@ -4,6 +4,14 @@ Do you remember the last time you found yourself obsessing over a song? Maybe it
 
 I built ***LyRec*** (see what I did there? 😉), a recommendation system for songs, that lets you do this!
 
+## How it works?
+
+
+
+## Get the dataset and embeddings
+
+https://drive.google.com/drive/folders/1hBfMiFeM4CPiQ2k3F81DfQiQPZib-KB8?usp=sharing
+
 ## Demo
 
 ![](https://github.com/Suji04/LyRec/blob/main/demo/demo.gif)
